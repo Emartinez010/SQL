@@ -1,0 +1,52 @@
+CREATE TABLE singers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER);
+    
+INSERT INTO singers (fullname, age) VALUES ("Mariah Carey", "54");
+INSERT INTO singers (fullname, age) VALUES ("Elton John", "76");
+INSERT INTO singers (fullname, age) VALUES ("Adele Laurie Blue Adkins", "34");
+INSERT INTO singers (fullname, age) VALUES ("Shakira Isabel Mebarak Ripoll", "46");
+INSERT INTO singers (fullname, age) VALUES ("Stevie Wonder", "72");
+INSERT INTO singers (fullname, age) VALUES ("Mariah Carey", "54");
+INSERT INTO singers (fullname, age) VALUES ("Dolly Parton", "77");
+INSERT INTO singers (fullname, age) VALUES ("Alicia Keys", "42");
+INSERT INTO singers (fullname, age) VALUES ("Harry Styles", "29");
+INSERT INTO singers (fullname, age) VALUES ("Carlos Vives", "61");
+INSERT INTO singers (fullname, age) VALUES ("Billy Joel", "73");
+INSERT INTO singers (fullname, age) VALUES ("Ed Sheeran", "32");
+INSERT INTO singers (fullname, age) VALUES ("Rita Ora", "32");
+INSERT INTO singers (fullname, age) VALUES ("John Legend", "44");
+INSERT INTO singers (fullname, age) VALUES ("Justin Timberlake", "42");
+
+
+CREATE table birthplace (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    nationality TEXT);
+    
+INSERT INTO birthplace (person_id, nationality) VALUES (1, "American");
+INSERT INTO birthplace (person_id, nationality) VALUES (2, "British");
+INSERT INTO birthplace (person_id, nationality) VALUES (3, "English");
+INSERT INTO birthplace (person_id, nationality) VALUES (4, "Colombian");
+INSERT INTO birthplace (person_id, nationality) VALUES (5, "American");
+INSERT INTO birthplace (person_id, nationality) VALUES (6, "American");
+INSERT INTO birthplace (person_id, nationality) VALUES (7, "American");
+INSERT INTO birthplace (person_id, nationality) VALUES (8, "American");
+INSERT INTO birthplace (person_id, nationality) VALUES (9, "English");
+INSERT INTO birthplace (person_id, nationality) VALUES (10, "Colombian");
+INSERT INTO birthplace (person_id, nationality) VALUES (11, "American");
+INSERT INTO birthplace (person_id, nationality) VALUES (12, "English");
+INSERT INTO birthplace (person_id, nationality) VALUES (13, "British");
+INSERT INTO birthplace (person_id, nationality) VALUES (14, "American");
+INSERT INTO birthplace (person_id, nationality) VALUES (15, "American");
+
+SELECT singers.fullname, birthplace.nationality
+
+FROM singers
+
+LEFT OUTER JOIN birthplace 
+
+ON singers.id = birthplace.person_id;
+
+
